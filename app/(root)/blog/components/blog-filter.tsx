@@ -22,7 +22,6 @@ export default function BlogFilter({ categories }: BlogFilterProps) {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  // const selectedCategory = searchParams.get("category")?.toString() || "All";
   const selectedSearch = searchParams.get("search")?.toString();
 
   function handleSearch(term: string) {

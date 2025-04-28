@@ -10,10 +10,20 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("author").title("Authors"),
       S.documentTypeListItem("stat").title("Stats"),
       S.documentTypeListItem("faq").title("FAQS"),
+      S.documentTypeListItem("course").title("Courses"),
+      S.documentTypeListItem("achievement").title("Achievements"),
       S.divider(),
       ...S.documentTypeListItems().filter(
         (item) =>
           item.getId() &&
-          !["post", "category", "author", "stat", "faq"].includes(item.getId()!)
+          ![
+            "post",
+            "category",
+            "author",
+            "stat",
+            "faq",
+            "course",
+            "achievement",
+          ].includes(item.getId()!)
       ),
     ]);

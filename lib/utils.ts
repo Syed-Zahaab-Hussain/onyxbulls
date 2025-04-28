@@ -24,3 +24,10 @@ export function DateFormat(date: string): string {
     return "Invalid date"; // or return a default date, or empty string
   }
 }
+
+export function CurrencyFormat(amount: number) {
+  return new Intl.NumberFormat("en-PK", {
+    style: "currency",
+    currency: "PKR",
+  }).format(amount);
+}

@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, CurrencyFormat } from "@/lib/utils";
+import Link from "next/link";
 
 interface PricingPlan {
   id: string;
@@ -21,7 +21,7 @@ export default function PricingSection() {
     {
       id: "starter",
       name: "Starter",
-      price: 49,
+      price: 10000,
       description:
         "Perfect for beginners looking to learn the fundamentals of trading.",
       features: [
@@ -36,7 +36,7 @@ export default function PricingSection() {
     {
       id: "professional",
       name: "Professional",
-      price: 99,
+      price: 20000,
       description:
         "Comprehensive training for serious traders looking to improve their skills.",
       features: [
@@ -53,7 +53,7 @@ export default function PricingSection() {
     {
       id: "elite",
       name: "Elite",
-      price: 199,
+      price: 30000,
       description:
         "For dedicated traders seeking mastery and personalized guidance.",
       features: [
@@ -107,7 +107,7 @@ export default function PricingSection() {
                   </h3>
                   <div className="mb-4">
                     <span className="text-5xl font-bold text-neon-600 dark:text-neon-500">
-                      ${currentPlan.price}
+                      {CurrencyFormat(currentPlan.price)}
                     </span>
                     <span className="text-gray-500 dark:text-gray-400 ml-1">
                       /month
@@ -130,14 +130,16 @@ export default function PricingSection() {
                     ))}
                   </div>
 
-                  <Button
-                    className={cn(
-                      "w-full py-6 text-lg transition-all duration-300",
-                      "bg-neon-500 hover:bg-neon-600 text-black shadow-[0_0_15px_rgba(0,255,170,0.3)] hover:shadow-[0_0_25px_rgba(0,255,170,0.5)]"
-                    )}
-                  >
-                    {currentPlan.cta}
-                  </Button>
+                  <Link href={"/contact-us"}>
+                    <Button
+                      className={cn(
+                        "w-full py-6 text-lg transition-all duration-300",
+                        "bg-neon-500 hover:bg-neon-600 text-black shadow-[0_0_15px_rgba(0,255,170,0.3)] hover:shadow-[0_0_25px_rgba(0,255,170,0.5)]"
+                      )}
+                    >
+                      {currentPlan.cta}
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -165,7 +167,7 @@ export default function PricingSection() {
                       <div>
                         <h4 className="font-bold text-lg">{plan.name}</h4>
                         <p className="text-gray-500 dark:text-gray-400">
-                          ${plan.price}/month
+                          {CurrencyFormat(plan.price)}/month
                         </p>
                       </div>
                       {selectedPlan === plan.id && (
@@ -180,7 +182,7 @@ export default function PricingSection() {
                 ))}
               </div>
 
-              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
+              {/* <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
                 <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
                   Not sure which plan is right for you? Contact us for a
                   personalized recommendation.
@@ -191,7 +193,7 @@ export default function PricingSection() {
                 >
                   Contact our team <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

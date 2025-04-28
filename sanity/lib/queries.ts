@@ -93,3 +93,60 @@ export const POST_QUERY = `*[_type == "post" &&
   },
   body
 }[0]`;
+
+export const COURSES_QUERY = `*[_type == "course" && 
+  lower(title) match lower($search + "*") ] | order(_createdAt desc) {
+  title,
+  "slug": slug.current,
+  _createdAt,
+  level,
+  description,
+  duration,
+  lessons,
+  salePrice,
+  price,
+  "instructor": instructor->{name, role, image},
+  image{
+    asset->{url},
+    alt
+  }
+}`;
+
+export const COURSE_QUERY = `*[_type == "course" && slug.current == $slug]  {
+_id,
+  title,
+  "slug": slug.current,
+  longDescription,
+  _createdAt,
+  level,
+  description,
+  duration,
+  lessons,
+  salePrice,
+  price,
+  "instructor": instructor->{
+    name,
+    title,
+    "image": image.asset->url
+  },
+ "image": image.asset->url,
+ syllabus[]{
+    title,
+    lessons[]{
+      title,
+      duration
+    }
+  },
+  requirements,
+  includes
+}[0]`;
+
+export const ACHIEVEMENTS_QUERY = `*[_type == "achievement"] | order(_createdAt desc) {
+  title,
+  _createdAt,
+  year,
+  image{
+    asset->{url},
+    alt
+  }
+}`;

@@ -1,80 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { Mail, Phone, MapPin } from "lucide-react";
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
-
-const socialIcons = [
-  {
-    href: "#",
-    icon: Facebook,
-  },
-  {
-    href: "#",
-    icon: Twitter,
-  },
-  {
-    href: "#",
-    icon: Instagram,
-  },
-  {
-    href: "#",
-    icon: Linkedin,
-  },
-  {
-    href: "#",
-    icon: Youtube,
-  },
-];
-
-const navLinks = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About Us",
-    href: "/about-us",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Contact Us",
-    href: "/contact-us",
-  },
-];
-const tradingResourceLinks = [
-  {
-    title: "Forex Basics",
-    href: "#",
-  },
-  {
-    title: "Cryptocurrency Guide",
-    href: "#",
-  },
-  {
-    title: "Technical Analysis",
-    href: "#",
-  },
-  {
-    title: "Fundamental Analysis",
-    href: "#",
-  },
-  {
-    title: "Trading Psychology",
-    href: "#",
-  },
-];
+  socialIcons,
+  tradingResourceLinks,
+  navLinks,
+} from "@/data/layout-data";
 
 export default function Footer() {
   return (

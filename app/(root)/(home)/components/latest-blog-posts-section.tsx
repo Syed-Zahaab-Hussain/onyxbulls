@@ -1,59 +1,10 @@
 "use client";
 
 import BlogPostCard from "@/components/blog-post-card";
+import { Post } from "@/lib/types";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-interface Post {
-  _id: string;
-  mainImage: string;
-  title: string;
-  publishedAt: string;
-  excerpt: string;
-  slug: {
-    current: string;
-  };
-  category: {
-    title: string;
-  };
-}
-
-// const blogPosts = [
-//   {
-//     id: 1,
-//     title: "Understanding Cryptocurrency Market Cycles",
-//     excerpt:
-//       "Learn how to identify and navigate the four main phases of cryptocurrency market cycles to optimize your trading strategy.",
-//     image: "/images/blog/crypto-cycles.jpg",
-//     category: "Cryptocurrency",
-//     date: "April 5, 2023",
-//     author: "Michael Chen",
-//     slug: "understanding-cryptocurrency-market-cycles",
-//   },
-//   {
-//     id: 2,
-//     title: "Essential Forex Risk Management Strategies",
-//     excerpt:
-//       "Discover the key risk management techniques that professional forex traders use to protect their capital and maximize returns.",
-//     image: "/images/blog/forex-risk.jpg",
-//     category: "Forex",
-//     date: "March 22, 2023",
-//     author: "Sarah Johnson",
-//     slug: "essential-forex-risk-management-strategies",
-//   },
-//   {
-//     id: 3,
-//     title: "Technical Analysis: Moving Averages Explained",
-//     excerpt:
-//       "A comprehensive guide to understanding and using moving averages to identify trends and generate trading signals.",
-//     image: "/images/blog/technical-analysis.jpg",
-//     category: "Technical Analysis",
-//     date: "March 15, 2023",
-//     author: "David Williams",
-//     slug: "technical-analysis-moving-averages-explained",
-//   },
-// ];
 
 export default function LatestBlogPostsSection({ posts }: { posts: Post[] }) {
   return (

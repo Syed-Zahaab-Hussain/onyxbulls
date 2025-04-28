@@ -9,25 +9,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-
-const navLinks = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About Us",
-    href: "/about-us",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Contact Us",
-    href: "/contact-us",
-  },
-];
+import { navLinks } from "../data/layout-data";
 
 export default function Navbar() {
   return (

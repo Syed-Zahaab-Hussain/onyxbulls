@@ -5,25 +5,9 @@ import { motion } from "framer-motion";
 import { urlFor } from "@/sanity/lib/image";
 import { DateFormat } from "@/lib/utils";
 import { Badge } from "./ui/badge";
+import { Post } from "@/lib/types";
 
-interface Post {
-  mainImage: string;
-  title: string;
-  publishedAt: string;
-  excerpt: string;
-  slug: {
-    current: string;
-  };
-  category: {
-    title: string;
-  };
-}
-
-interface BlogPostCardProps {
-  post: Post;
-}
-
-export default function BlogPostCard({ post }: BlogPostCardProps) {
+export default function BlogPostCard({ post }: { post: Post }) {
   return (
     <motion.div
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
