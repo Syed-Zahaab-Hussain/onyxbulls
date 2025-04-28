@@ -49,7 +49,7 @@ export default function AboutMission() {
           >
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl border border-neon-500/20 dark:border-neon-500/30">
               <Image
-                src="https://placehold.co/600x400?text=No+Image"
+                src={"/images/about-image-1.jpg"}
                 alt="Our story"
                 fill
                 className="object-cover"

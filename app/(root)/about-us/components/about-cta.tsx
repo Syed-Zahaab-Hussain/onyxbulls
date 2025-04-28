@@ -30,7 +30,7 @@ export default function AboutCTA() {
             >
               Explore Courses
             </Button> */}
-            <Link href="/contact" passHref>
+            <Link href="/contact-us" passHref>
               <Button
                 variant="outline"
                 size="lg"
