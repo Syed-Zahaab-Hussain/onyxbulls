@@ -6,7 +6,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { navLinks } from "../data/layout-data";
@@ -69,6 +74,9 @@ export default function Navbar() {
               side="right"
               className="bg-black/95 dark:bg-black text-white border-l border-neon-500/30 z-50"
             >
+              <SheetTitle className="pt-6 pb-4 px-4 border-b border-neon-500/30">
+                <p className="text-xl font-semibold text-neon-400">Menu</p>
+              </SheetTitle>
               <div className="flex flex-col gap-6 py-6">
                 {navLinks.map((item) => (
                   <Link

@@ -28,9 +28,6 @@ export const achievementType = defineType({
           title: "Alternative Text",
           type: "string",
           description: "Important for SEO and accessibility",
-          options: {
-            isHighlighted: true,
-          },
           validation: (Rule) => Rule.required(),
         },
       ],

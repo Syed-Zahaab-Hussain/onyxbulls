@@ -1,6 +1,7 @@
 import { defineQuery } from "next-sanity";
 
 export const TOP_THREE_POSTS_QUERY = `*[_type == "post"][0..2] | order(publishedAt desc){
+  _id,
   title,
   slug,
   publishedAt,
@@ -59,6 +60,7 @@ export const AUTHORS_QUERY =
 export const POSTS_QUERY = `*[_type == "post" && 
   (lower(title) match lower($search + "*") || 
    lower(category->title) match lower($search + "*"))] | order(publishedAt desc) {
+   _id,
   title,
   slug,
   publishedAt,
@@ -77,6 +79,7 @@ export const POSTS_QUERY = `*[_type == "post" &&
 
 export const POST_QUERY = `*[_type == "post" && 
   slug.current == $slug]{
+  _id,
   title,
   slug,
   publishedAt,
@@ -96,6 +99,7 @@ export const POST_QUERY = `*[_type == "post" &&
 
 export const COURSES_QUERY = `*[_type == "course" && 
   lower(title) match lower($search + "*") ] | order(_createdAt desc) {
+  _id,
   title,
   "slug": slug.current,
   _createdAt,
@@ -113,7 +117,7 @@ export const COURSES_QUERY = `*[_type == "course" &&
 }`;
 
 export const COURSE_QUERY = `*[_type == "course" && slug.current == $slug]  {
-_id,
+  _id,
   title,
   "slug": slug.current,
   longDescription,
@@ -142,6 +146,7 @@ _id,
 }[0]`;
 
 export const ACHIEVEMENTS_QUERY = `*[_type == "achievement"] | order(_createdAt desc) {
+  _id,
   title,
   _createdAt,
   year,

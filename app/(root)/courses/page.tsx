@@ -1,4 +1,4 @@
-import { CourseHero } from "@/app/(root)/courses/components/course-hero";
+import CourseHero  from "@/app/(root)/courses/components/course-hero";
 import { CourseFilter } from "@/app/(root)/courses/components/course-filter";
 // import { courses } from "@/lib/types";
 import AnimatedCourseCards from "./components/animated-course-cards";

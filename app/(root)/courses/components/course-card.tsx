@@ -92,7 +92,7 @@ export function CourseCard({ course }: CourseCardProps) {
           <div>
             {course.salePrice ? (
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-neon-500">
+                <span className="text-xl font-bold text-neon-500">
                   {CurrencyFormat(course.salePrice)}
                 </span>
                 <span className="text-sm text-muted-foreground line-through">
