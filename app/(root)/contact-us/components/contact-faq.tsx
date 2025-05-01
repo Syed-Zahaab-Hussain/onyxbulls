@@ -14,39 +14,6 @@ interface FAQ {
 }
 
 export default function ContactFAQ({ faqs }: { faqs: FAQ[] }) {
-  // const faqs: FAQ[] = [
-  //   {
-  //     question: "How do I enroll in a trading course?",
-  //     answer:
-  //       "You can enroll in our trading courses by visiting the Courses page, selecting your desired course, and clicking the 'Enroll Now' button. You'll be guided through our secure checkout process, and once payment is confirmed, you'll receive immediate access to the course materials.",
-  //   },
-  //   {
-  //     question: "What payment methods do you accept?",
-  //     answer:
-  //       "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and cryptocurrency payments (Bitcoin, Ethereum, and USDT). For corporate training or group enrollments, we also offer wire transfer options.",
-  //   },
-  //   {
-  //     question: "Do you offer refunds if I'm not satisfied with the course?",
-  //     answer:
-  //       "Yes, we offer a 14-day money-back guarantee for all our courses. If you're not satisfied with the content, you can request a full refund within 14 days of purchase, provided you haven't completed more than 30% of the course material.",
-  //   },
-  //   {
-  //     question: "How long do I have access to the course materials?",
-  //     answer:
-  //       "Once enrolled, you have lifetime access to the course materials, including any future updates. This allows you to learn at your own pace and revisit the content whenever you need a refresher.",
-  //   },
-  //   {
-  //     question: "Do you offer one-on-one mentoring?",
-  //     answer:
-  //       "Yes, we offer personalized mentoring sessions with our expert traders. These can be booked separately from our courses through the Mentoring page. We recommend completing at least one of our foundational courses before booking a mentoring session to maximize the value of your one-on-one time.",
-  //   },
-  //   {
-  //     question: "Are your courses suitable for complete beginners?",
-  //     answer:
-  //       "We have courses designed specifically for beginners with no prior trading experience. Our 'Trading Fundamentals' course is the perfect starting point, covering all the basics you need to understand the financial markets and begin your trading journey.",
-  //   },
-  // ];
-
   return (
     <section className="py-16 bg-white dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4">
@@ -99,7 +66,7 @@ export default function ContactFAQ({ faqs }: { faqs: FAQ[] }) {
               href="mailto:support@dominionmarkets.com"
               className="text-neon-600 dark:text-neon-500 font-medium hover:text-neon-700 dark:hover:text-neon-400 transition-colors"
             >
-              {process.env.EMAIL!}
+              {process.env.NEXT_PUBLIC_EMAIL!}
             </a>
           </div>
         </motion.div>

@@ -46,7 +46,7 @@ export const achievementType = defineType({
   ],
   preview: {
     select: {
-      title: "name",
+      title: "title",
       media: "image",
     },
   },

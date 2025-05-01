@@ -71,9 +71,9 @@ export default function AchievementsCarousel({
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="group relative overflow-hidden rounded-xl shadow-lg"
+                  className="relative overflow-hidden rounded-xl shadow-lg"
                 >
-                  <div className="aspect-[4/3] relative">
+                  <div className="aspect-[2/2] relative">
                     <Image
                       src={
                         urlFor(achievement.image).url() ||

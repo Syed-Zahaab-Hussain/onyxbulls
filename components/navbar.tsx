@@ -13,16 +13,16 @@ import { navLinks } from "../data/layout-data";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-black/90 dark:bg-black text-white border-b border-neon-500/20 dark:border-neon-500/30 backdrop-blur-sm transition-colors duration-300">
+    <header className="absolute w-full top-0 z-50 bg-transparent text-white transition-colors duration-300">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
-          <div className="relative h-10 w-10 mr-2">
+          <div className="relative h-12 w-12 mr-3">
             <Image
               src="/images/logo.svg"
               alt="Onyxbulls Logo"
-              width={42}
-              height={42}
+              width={72}
+              height={72}
               className="object-contain"
             />
           </div>
@@ -38,13 +38,13 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center">
+        <div className="hidden lg:flex items-center mr-4">
           <NavigationMenu className="z-50">
             <NavigationMenuList className="space-x-1">
               {navLinks.map((item) => (
                 <NavigationMenuItem key={item.title}>
                   <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink className="text-white hover:text-neon-400 font-medium text-sm rounded-md px-4 py-2 hover:bg-black dark:hover:bg-neon-400 dark:hover:bg-opacity-15">
+                    <NavigationMenuLink className="text-white  font-medium text-sm rounded-md px-4 py-2  hover:bg-neon-400 hover:bg-opacity-15">
                       {item.title}
                     </NavigationMenuLink>
                   </Link>

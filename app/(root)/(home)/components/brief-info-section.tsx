@@ -70,7 +70,7 @@ export default function BriefInfoSection() {
         <section
           key={index}
           className={
-            "py-16 bg-gray-50 dark:bg-black/50 border-y border-neon-500/10 dark:border-neon-500/20 transition-colors duration-300"
+            "py-16 bg-gray-50 dark:bg-black/50 border-y border-neon-500/10 dark:border-neon-500/20 transition-colors duration-300 overflow-x-hidden"
           }
         >
           <div className="container mx-auto px-4">
@@ -133,7 +133,7 @@ export default function BriefInfoSection() {
                     alt={section.imageAlt}
                     width={600}
                     height={400}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover max-w-full"
                   />
                 </div>
               </motion.div>

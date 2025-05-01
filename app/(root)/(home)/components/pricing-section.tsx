@@ -89,7 +89,7 @@ export default function PricingSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto items-center">
           {/* Plan Details (Left Side - 3 columns on desktop) */}
           <div className="md:col-span-3 order-2 md:order-1">
             <AnimatePresence mode="wait">
@@ -181,19 +181,6 @@ export default function PricingSection() {
                   </button>
                 ))}
               </div>
-
-              {/* <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
-                  Not sure which plan is right for you? Contact us for a
-                  personalized recommendation.
-                </p>
-                <Link
-                  href="/contact"
-                  className="text-neon-600 dark:text-neon-500 font-medium hover:text-neon-700 dark:hover:text-neon-400 transition-colors inline-flex items-center text-sm"
-                >
-                  Contact our team <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div> */}
             </div>
           </div>
         </div>

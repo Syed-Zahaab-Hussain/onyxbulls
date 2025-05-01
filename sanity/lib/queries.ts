@@ -1,6 +1,6 @@
 import { defineQuery } from "next-sanity";
 
-export const TOP_THREE_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc){
+export const TOP_THREE_POSTS_QUERY = `*[_type == "post"][0..2] | order(publishedAt desc){
   title,
   slug,
   publishedAt,

@@ -1,7 +1,6 @@
 import StatsBar from "@/app/(root)/(home)/components/stats-bar";
 import PricingSection from "@/app/(root)/(home)/components/pricing-section";
 import Hero from "./components/hero-section";
-import TradingAssetsSection from "./components/trading-assets-section";
 import BriefInfoSection from "./components/brief-info-section";
 import LatestBlogPostsSection from "./components/latest-blog-posts-section";
 import AchievementsCarousel from "./components/achievements-carousel";
@@ -27,14 +26,11 @@ export default async function Home() {
       {/* Stats Bar */}
       <StatsBar stats={stats} />
 
-      {/* Trading Assets Section */}
-      <TradingAssetsSection />
+      {/* Achievements Carousel Section */}
+      <AchievementsCarousel achievements={achievements} />
 
       {/* Trading Info Section */}
       <BriefInfoSection />
-
-      {/* Achievements Carousel Section */}
-      <AchievementsCarousel achievements={achievements} />
 
       {/* Pricing Plans Section */}
       <PricingSection />
