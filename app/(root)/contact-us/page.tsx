@@ -5,8 +5,15 @@ import ContactMap from "@/app/(root)/contact-us/components/contact-map";
 import ContactFAQ from "@/app/(root)/contact-us/components/contact-faq";
 import { FAQS_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
+import { Metadata } from "next";
 
 export const revalidate = 60 * 60 * 24;
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+};
+
+
 
 export default async function ContactPage() {
   const faqs = await client.fetch(FAQS_QUERY);

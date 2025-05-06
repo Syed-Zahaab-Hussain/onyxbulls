@@ -1,9 +1,16 @@
-import CourseHero  from "@/app/(root)/courses/components/course-hero";
+import CourseHero from "@/app/(root)/courses/components/course-hero";
 import { CourseFilter } from "@/app/(root)/courses/components/course-filter";
-// import { courses } from "@/lib/types";
 import AnimatedCourseCards from "./components/animated-course-cards";
 import { COURSES_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
+
+import { Metadata } from "next";
+
+export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Course",
+};
 
 interface SearchParams {
   search?: string;
@@ -17,8 +24,6 @@ export default async function CoursesPage({
   const { search = "" } = searchParams;
 
   const courses = await client.fetch(COURSES_QUERY, { search });
-
-  console.log("DANGER: ", courses.instructor);
 
   return (
     <>

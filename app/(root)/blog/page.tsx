@@ -3,8 +3,13 @@ import { client } from "@/sanity/lib/client";
 import AnimatedPosts from "./components/animated-posts";
 import BlogHeader from "./components/blog-header";
 import BlogFilter from "./components/blog-filter";
+import { Metadata } from "next";
 
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 interface SearchParams {
   search?: string;
@@ -20,7 +25,6 @@ export default async function BlogPage({
   const categories = await client.fetch(CATEGORIES_QUERY);
   const posts = await client.fetch(POSTS_QUERY, { search });
 
-  // console.log("DANGER: ", posts);
 
   return (
     <main className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">

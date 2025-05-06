@@ -1,21 +1,40 @@
 import { POST_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { PortableText } from "next-sanity";
-import {
-  LucideFacebook,
-  LucideTwitter,
-  LucideLinkedin,
-  LucidePencil,
-  Calendar,
-  Tag,
-} from "lucide-react";
+import { Calendar, Tag } from "lucide-react";
 import AnimatedContent from "./components/animated-content";
 import AnimatedHeader from "./components/animated-header";
 import { DateFormat } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Metadata } from "next";
+import { urlFor } from "@/sanity/lib/image";
+import { cache } from "react";
+import { ShareButtons } from "./components/ShareButtons";
+import { notFound } from "next/navigation";
 
 interface ParamsProps {
   slug?: string;
+}
+
+const getPost = cache(async (slug: string) => {
+  const post = await client.fetch(POST_QUERY, { slug });
+  // if (!post) throw new Error("Post not found");
+  return post;
+});
+
+export async function generateMetadata({
+  params,
+}: {
+  params: ParamsProps;
+}): Promise<Metadata> {
+  const post = await getPost(params.slug || "");
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      images: [{ url: urlFor(post.mainImage).url() }],
+    },
+  };
 }
 
 export default async function BlogPostPage({
@@ -23,12 +42,13 @@ export default async function BlogPostPage({
 }: {
   params: ParamsProps;
 }) {
-  const { slug = "" } = params;
+  const post = await getPost(params.slug || "");
 
-  // console.log("SLUG: ", slug);
-  const post = await client.fetch(POST_QUERY, { slug });
-  console.log("DANGER: ", post?.author);
+  // console.log("DANGER: ", post);
 
+  if (!post) {
+    return notFound();
+  }
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       <article>
@@ -72,7 +92,7 @@ export default async function BlogPostPage({
                     <div className="mr-4">
                       <Avatar>
                         <AvatarImage
-                          src={post?.author.avatar}
+                          src={urlFor(post?.author.image).url()}
                           alt={post?.author.name}
                         />
                         <AvatarFallback>
@@ -84,9 +104,9 @@ export default async function BlogPostPage({
                     <div>
                       <h4 className="font-bold">{post?.author.name}</h4>
 
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
                         <PortableText value={post?.author.bio} />
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -96,20 +116,7 @@ export default async function BlogPostPage({
               <AnimatedContent delay={0.7}>
                 <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-800">
                   <h3 className="text-lg font-bold mb-4">Share this article</h3>
-                  <div className="flex gap-2">
-                    <button className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:opacity-90 transition-opacity">
-                      <LucideFacebook className="h-5 w-5" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-[#1DA1F2] flex items-center justify-center text-white hover:opacity-90 transition-opacity">
-                      <LucideTwitter className="h-5 w-5" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-[#0A66C2] flex items-center justify-center text-white hover:opacity-90 transition-opacity">
-                      <LucideLinkedin className="h-5 w-5" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:opacity-90 transition-opacity">
-                      <LucidePencil className="h-5 w-5" />
-                    </button>
-                  </div>
+                  <ShareButtons title={post?.title} />
                 </div>
               </AnimatedContent>
             </div>

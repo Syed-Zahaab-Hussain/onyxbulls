@@ -10,8 +10,13 @@ import {
   STATS_QUERY,
   TOP_THREE_POSTS_QUERY,
 } from "@/sanity/lib/queries";
+import { Metadata } from "next";
 
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default async function Home() {
   const posts = await client.fetch(TOP_THREE_POSTS_QUERY);

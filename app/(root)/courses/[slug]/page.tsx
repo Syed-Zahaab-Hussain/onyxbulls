@@ -4,14 +4,38 @@ import CourseSidebar from "./components/course-sidebar";
 import { notFound } from "next/navigation";
 import { client } from "@/sanity/lib/client";
 import { COURSE_QUERY } from "@/sanity/lib/queries";
+import { cache } from "react";
+import { Metadata } from "next";
+
+interface ParamsProps {
+  slug?: string;
+}
+
+const getCourse = cache(async (slug: string) => {
+  return await client.fetch(COURSE_QUERY, { slug });
+});
+
+export async function generateMetadata({
+  params,
+}: {
+  params: ParamsProps;
+}): Promise<Metadata> {
+  const course = await getCourse(params.slug || "");
+  return {
+    title: course.title,
+    description: course.longDescription,
+    openGraph: {
+      images: [{ url: course.image }],
+    },
+  };
+}
 
 export default async function CourseDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: ParamsProps;
 }) {
-  const { slug = "" } = params;
-  const course = await client.fetch(COURSE_QUERY, { slug });
+  const course = await getCourse(params.slug || "");
 
   if (!course) {
     return notFound();
