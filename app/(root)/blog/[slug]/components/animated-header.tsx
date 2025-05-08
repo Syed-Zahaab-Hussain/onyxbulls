@@ -19,7 +19,7 @@ export default function AnimatedHeader({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="relative w-full h-[40vh] md:h-[50vh] bg-black"
+      className="relative w-full h-[60vh] md:h-[70vh] bg-black"
     >
       <Image
         src={

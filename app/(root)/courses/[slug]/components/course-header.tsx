@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Course } from "@/lib/types";
 import { CurrencyFormat } from "@/lib/utils";
+import { urlFor } from "@/sanity/lib/image";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,16 +35,31 @@ const itemVariants = {
 export default function CourseHeader({ course }: { course: Course }) {
   return (
     <motion.div
-      className="bg-black text-white py-12"
+      className="relative text-white pt-12 pb-12"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="container mx-auto px-4">
-        <motion.div variants={itemVariants}>
+      {/* Background Image with overlay */}
+      {course.backgroundImage && (
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={urlFor(course.backgroundImage).url()}
+            alt={course.title}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+        </div>
+      )}
+
+      <div className="container mx-auto px-4 relative">
+        {/* Back link with more padding-top to avoid navbar overlap */}
+        <motion.div variants={itemVariants} className="pt-8">
           <Link
             href="/courses"
-            className="inline-flex items-center text-neon-400 hover:text-neon-300 mb-6"
+            className="inline-flex items-center text-neon-400 hover:text-neon-300 mb-6 bg-black/50 rounded-lg px-4 py-2 backdrop-blur-sm"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Courses
@@ -61,7 +77,7 @@ export default function CourseHeader({ course }: { course: Course }) {
 
             <motion.h1
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
             >
               {course.title}
             </motion.h1>
@@ -77,7 +93,7 @@ export default function CourseHeader({ course }: { course: Course }) {
               variants={itemVariants}
               className="flex items-center flex-wrap gap-6 mb-6"
             >
-              <div className="flex items-center">
+              <div className="flex items-center bg-black/50 rounded-lg px-4 py-2 backdrop-blur-sm">
                 <div className="w-10 h-10 relative rounded-full overflow-hidden mr-3 border-2 border-neon-500">
                   <Image
                     src={
@@ -101,7 +117,7 @@ export default function CourseHeader({ course }: { course: Course }) {
 
           <motion.div
             variants={itemVariants}
-            className="bg-gray-900 rounded-lg p-6 h-fit"
+            className="bg-gray-900/80 rounded-lg p-6 h-fit backdrop-blur-sm border border-gray-700"
           >
             <div className="relative h-48 w-full mb-6 rounded-md overflow-hidden">
               <Image

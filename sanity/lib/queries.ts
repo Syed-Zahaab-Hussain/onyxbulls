@@ -134,6 +134,7 @@ export const COURSE_QUERY = `*[_type == "course" && slug.current == $slug]  {
     "image": image.asset->url
   },
  "image": image.asset->url,
+ "backgroundImage": backgroundImage.asset->url,
  syllabus[]{
     title,
     lessons[]{

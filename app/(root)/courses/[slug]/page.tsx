@@ -7,6 +7,8 @@ import { COURSE_QUERY } from "@/sanity/lib/queries";
 import { cache } from "react";
 import { Metadata } from "next";
 
+export const revalidate = 0;
+
 interface ParamsProps {
   slug?: string;
 }
@@ -40,6 +42,8 @@ export default async function CourseDetailPage({
   if (!course) {
     return notFound();
   }
+
+  console.log(course);
 
   return (
     <main>

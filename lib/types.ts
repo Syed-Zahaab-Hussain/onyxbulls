@@ -12,6 +12,7 @@ export interface Course {
   duration: string;
   lessons: number;
   image?: string;
+  backgroundImage: string;
   instructor?: {
     name: string;
     title: string;
