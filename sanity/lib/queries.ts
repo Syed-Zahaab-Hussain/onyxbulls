@@ -156,3 +156,15 @@ export const ACHIEVEMENTS_QUERY = `*[_type == "achievement"] | order(_createdAt 
     alt
   }
 }`;
+
+export const PRICING_PLANS_QUERY = `*[_type == "pricingPlan"] | order(order asc) {
+  _id,
+  name,
+  slug,
+  price,
+  description,
+  features,
+  ctaText,
+  highlightColor,
+  order
+}`;

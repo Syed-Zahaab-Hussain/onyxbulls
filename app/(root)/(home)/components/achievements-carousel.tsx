@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { urlFor } from "@/sanity/lib/image";
+import Autoplay from "embla-carousel-autoplay";
 
 interface Achievement {
   _id: number;
@@ -24,6 +25,8 @@ export default function AchievementsCarousel({
 }: {
   achievements: Achievement[];
 }) {
+
+  // console.log(achievements);
   return (
     <section className="py-20 bg-white dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4">
@@ -49,10 +52,15 @@ export default function AchievementsCarousel({
         </div>
 
         <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
+          // opts={{
+          //   align: "start",
+          //   loop: true,
+          // }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
           className="w-full"
         >
           <div className="flex justify-end gap-4 mb-6">

@@ -8,6 +8,7 @@ import { statType } from "./statType";
 import { faqType } from "./faqType";
 import { courseType } from "./courseType";
 import { achievementType } from "./achievementType";
+import { pricingPlanType } from "./pricingPlanType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -19,5 +20,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     faqType,
     courseType,
     achievementType,
+    pricingPlanType,
   ],
 };

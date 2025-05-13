@@ -35,10 +35,6 @@ export default function Navbar() {
             <span className="font-bold text-xl text-white uppercase group-hover:text-neon-400 transition-colors duration-300">
               Onyxbulls
             </span>
-
-            <p className="text-xs uppercase text-neon-500 dark:text-neon-400">
-              Your Trading Sanctuary
-            </p>
           </div>
         </Link>
 

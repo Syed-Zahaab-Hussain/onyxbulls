@@ -7,6 +7,7 @@ import AchievementsCarousel from "./components/achievements-carousel";
 import { client } from "@/sanity/lib/client";
 import {
   ACHIEVEMENTS_QUERY,
+  PRICING_PLANS_QUERY,
   STATS_QUERY,
   TOP_THREE_POSTS_QUERY,
 } from "@/sanity/lib/queries";
@@ -22,6 +23,7 @@ export default async function Home() {
   const posts = await client.fetch(TOP_THREE_POSTS_QUERY);
   const stats = await client.fetch(STATS_QUERY);
   const achievements = await client.fetch(ACHIEVEMENTS_QUERY);
+  const pricingPlans = await client.fetch(PRICING_PLANS_QUERY);
 
   return (
     <main className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
@@ -38,7 +40,7 @@ export default async function Home() {
       <BriefInfoSection />
 
       {/* Pricing Plans Section */}
-      <PricingSection />
+      <PricingSection plans={pricingPlans} />
 
       {/* Achievements Section */}
 

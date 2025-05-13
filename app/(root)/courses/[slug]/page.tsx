@@ -43,7 +43,7 @@ export default async function CourseDetailPage({
     return notFound();
   }
 
-  console.log(course);
+  // console.log(course);
 
   return (
     <main>
