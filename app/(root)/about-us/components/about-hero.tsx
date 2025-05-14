@@ -39,9 +39,10 @@ export default function AboutHero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-8"
           >
-            We&apos;ve helped over 100 students master the financial markets
-            through expert education, personalized mentorship, and cutting-edge
-            trading strategies.
+            At ONYXBULLS, we&apos;ve guided over 30 aspiring traders on their
+            journey to financial mastery through expert-led education,
+            one-on-one mentorship, and real-world trading strategies designed
+            for lasting success.
           </motion.p>
 
           <motion.div

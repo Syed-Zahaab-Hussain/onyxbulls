@@ -17,28 +17,28 @@ export default function AboutStats() {
   const stats: Stat[] = [
     {
       id: 1,
-      value: "10,000+",
+      value: "30+",
       label: "STUDENTS TAUGHT",
       description: "Traders from beginners to professionals",
       icon: <Users className="h-8 w-8" />,
     },
     {
       id: 2,
-      value: "50+",
+      value: "3+",
       label: "COUNTRIES",
       description: "Global community of traders",
       icon: <Globe className="h-8 w-8" />,
     },
     {
       id: 3,
-      value: "25+",
+      value: "3+",
       label: "COURSES",
       description: "Comprehensive trading curriculum",
       icon: <GraduationCap className="h-8 w-8" />,
     },
     {
       id: 4,
-      value: "15+",
+      value: "10+",
       label: "INDUSTRY AWARDS",
       description: "Recognized for educational excellence",
       icon: <Award className="h-8 w-8" />,
@@ -53,7 +53,7 @@ export default function AboutStats() {
             Our Impact By The Numbers
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Since 2015, we&apos;ve been dedicated to transforming traders&apos;
+            Since 2024, we&apos;ve been dedicated to transforming traders&apos;
             lives through education and mentorship. Here&apos;s what we&apos;ve
             accomplished so far.
           </p>

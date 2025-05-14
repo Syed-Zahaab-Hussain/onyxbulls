@@ -9,6 +9,7 @@ import { faqType } from "./faqType";
 import { courseType } from "./courseType";
 import { achievementType } from "./achievementType";
 import { pricingPlanType } from "./pricingPlanType";
+import { reviewType } from "./reviewType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -21,5 +22,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     courseType,
     achievementType,
     pricingPlanType,
+    reviewType,
   ],
 };

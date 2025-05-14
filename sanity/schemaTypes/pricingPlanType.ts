@@ -12,16 +12,6 @@ export const pricingPlanType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "name",
-        maxLength: 96,
-      },
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: "price",
       title: "Monthly Price",
       description: "Price in cents (e.g., $100 = 10000)",
@@ -48,19 +38,6 @@ export const pricingPlanType = defineType({
       type: "string",
       initialValue: "Get Started",
       validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: "highlightColor",
-      title: "Highlight Color",
-      type: "string",
-      options: {
-        list: [
-          { title: "Neon", value: "neon" },
-          { title: "Blue", value: "blue" },
-          { title: "Purple", value: "purple" },
-        ],
-      },
-      initialValue: "neon",
     }),
     defineField({
       name: "order",

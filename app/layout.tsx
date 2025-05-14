@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "Onyxbulls",
     template: "%s - Onyxbulls",
   },
-  description: "Your Path to Financial Freedom Starts Here",
+  description: "Let every trade bring you closer to financial freedom",
 };
 
 export default function RootLayout({

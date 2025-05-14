@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function LatestBlogPostsSection({ posts }: { posts: Post[] }) {
   return (
     <section className="py-16 bg-white dark:bg-black transition-colors duration-300">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function LatestBlogPostsSection({ posts }: { posts: Post[] }) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center"
         >
           {posts.map((post, index) => (
             <motion.div
@@ -40,6 +40,7 @@ export default function LatestBlogPostsSection({ posts }: { posts: Post[] }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="w-full max-w-md"
             >
               <BlogPostCard post={post} />
             </motion.div>

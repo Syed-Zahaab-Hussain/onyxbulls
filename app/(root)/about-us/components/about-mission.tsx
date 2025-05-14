@@ -19,24 +19,25 @@ export default function AboutMission() {
               Our Mission & Story
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Dominion Markets was founded in 2015 by a team of professional
-              traders who saw a gap in the market for high-quality, accessible
-              trading education. What began as a small group of mentors has
-              grown into a global community of traders and educators passionate
-              about helping others succeed in the financial markets.
+              ONYXBULLS began as a vision in 2022, when traders came together
+              with a mission to master the financial markets and deliver real
+              results. Starting with personal trading success and handling
+              international clients, we consistently generated strong returns —
+              and soon, demand grew for our expertise in both training and
+              financial consultancy.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Our mission is simple: to demystify trading and provide students
-              with the knowledge, tools, and support they need to become
-              consistently profitable traders. We believe that financial markets
-              should be accessible to everyone, not just institutional players.
+              In 2024, we officially launched ONYXBULLS to make our knowledge
+              accessible to others. Since then, we&apos;ve trained over 30
+              students — not just in theory, but in real-world, profit-driven
+              trading. Our unique approach blends technical skill, risk
+              management, and real-time market analysis.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              Over the years, we&apos;ve refined our teaching methodology to
-              focus on practical skills, risk management, and psychological
-              resilience—the three pillars of successful trading. Our approach
-              has helped thousands of students from over 50 countries transform
-              their trading and achieve financial independence.
+              Today, ONYXBULLS stands as the largest trading education community
+              in Balochistan — trusted, growing, and delivering results. Our
+              mission is simple: to empower individuals with the skills,
+              mindset, and tools needed to succeed in the global forex market.
             </p>
           </motion.div>
 

@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { BarChart, Check, Zap } from "lucide-react";
+import { BarChart, Check, Zap, Notebook, Brain } from "lucide-react";
 
 const BriefInfos = [
   {
     title: "Master the Markets",
     description:
-      "Whether you're new to trading or looking to refine your strategy, our comprehensive education resources will help you navigate the complex world of forex and cryptocurrency markets.",
+      "Whether you're just starting out or fine-tuning your skills, ONYXBULLS gives you the knowledge, tools, and insights to gain excellent profits in forex trading.",
     items: [
       {
         icon: Check,
@@ -34,27 +34,27 @@ const BriefInfos = [
     reverseLayout: false,
   },
   {
-    title: "Cryptocurrency Revolution",
+    title: "The Power of Forex Trading (Cryptocurrency Revolution)",
     description:
-      "Dive into the world of digital assets with our expert guidance. Understand blockchain technology, trading strategies, and how to securely manage your crypto portfolio.",
+      "Step into the world’s most liquid market with expert support from ONYXBULLS. Learn how currencies move, when to trade, and how to build strategies that perform.",
     items: [
       {
-        icon: Check,
-        title: "Blockchain Fundamentals",
+        icon: Notebook,
+        title: "Forex Fundamentals",
         description:
-          "Learn the core concepts behind cryptocurrencies and how blockchain works.",
-      },
-      {
-        icon: Zap,
-        title: "Crypto Trading Strategies",
-        description:
-          "Master techniques for trading volatile cryptocurrency markets effectively.",
+          "Understand the driving forces behind currency movements, market sessions, and the role of economic indicators.",
       },
       {
         icon: BarChart,
-        title: "Portfolio Management",
+        title: "Proven Trading Strategies",
         description:
-          "Discover how to diversify and protect your digital asset investments.",
+          "Explore time-tested techniques for trading forex — from scalping and swing trading to risk management and trend analysis.",
+      },
+      {
+        icon: Brain,
+        title: "Smart Risk & Capital Management",
+        description:
+          "Learn how to manage your capital, set stop-losses, and protect your account while maximizing potential returns.",
       },
     ],
     imageSrc: "/images/home/info-section-2.jpg",

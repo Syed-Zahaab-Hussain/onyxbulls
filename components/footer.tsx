@@ -28,9 +28,10 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 mb-6">
-              Your trusted partner for forex and cryptocurrency education. We
-              provide comprehensive training and resources to help you succeed
-              in the financial markets.
+              Master the forex markets with confidence.
+              <br />
+              Learn from professionals, trade with purpose, and build your
+              financial future.
             </p>
 
             {/* Social Links */}
@@ -72,21 +73,24 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6 text-neon-500">Contact Us</h3>
             <ul className="space-y-4 mb-6">
-              <li className="flex items-start">
+              <li className="flex items-center">
                 <MapPin className="h-5 w-5 mr-3 text-neon-500 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-300">
-                  behind virtual university, Model Town, Quetta, Balochistan,
-                  Pakistan
+                  behind virtual university, Model Town, <br />
+                  Quetta, Balochistan, Pakistan
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-neon-500 flex-shrink-0" />
-                <span className="text-gray-300">+92 333 1266448</span>
+                <span className="text-gray-300">
+                  +92 312 8358123 (Support) <br /> +92 312 8042559 (Info)
+                </span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-neon-500 flex-shrink-0" />
                 <span className="text-gray-300">
-                  {process.env.NEXT_PUBLIC_EMAIL}
+                  mk1626836@gmail.com (Support) <br /> onyxbulls44@gmail.com
+                  (Info)
                 </span>
               </li>
             </ul>

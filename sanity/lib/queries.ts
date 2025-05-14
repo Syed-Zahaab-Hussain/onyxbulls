@@ -168,3 +168,21 @@ export const PRICING_PLANS_QUERY = `*[_type == "pricingPlan"] | order(order asc)
   highlightColor,
   order
 }`;
+
+export const REVIEWS_QUERY = `*[_type == "review"] | order(order asc) {
+  _id,
+  name,
+  role,
+  location,
+  image {
+    asset -> {
+      url,
+      metadata {
+        dimensions
+      }
+    }
+  },
+  comment,
+  rating,
+  order
+}`;

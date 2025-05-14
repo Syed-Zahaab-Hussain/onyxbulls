@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
@@ -20,23 +20,23 @@ export default function ContactInfo() {
     {
       icon: <Phone className="h-6 w-6 text-neon-500" />,
       title: "Phone Numbers",
-      details: [
-        "+92 333 1266448 (General Inquiries)",
-        "+92 333 1266448 (Support)",
-      ],
+      details: ["+92 312 8358123 (Support)", "+92 312 8042559 (Info)"],
       action: {
         text: "Call Us",
-        url: "tel:+92 333 1266448",
+        url: "tel:+92 312 8042559",
         icon: null,
       },
     },
     {
       icon: <Mail className="h-6 w-6 text-neon-500" />,
       title: "Email Addresses",
-      details: ["info@onyxbulls.com", "support@onyxbulls.com"],
+      details: [
+        "mk1626836@gmail.com (Support)",
+        "onyxbulls44@gmail.com (Info)",
+      ],
       action: {
         text: "Email Us",
-        url: "mailto:info@onyxbulls.com",
+        url: "mailto:onyxbulls44@gmail.com",
         icon: null,
       },
     },
@@ -44,7 +44,7 @@ export default function ContactInfo() {
       icon: <Clock className="h-6 w-6 text-neon-500" />,
       title: "Business Hours",
       details: [
-        "Monday - Friday: 9:00 AM - 6:00 PM EST",
+        "Monday - Friday: 9:00 AM - 6:00 PM PKT",
         "Saturday - Sunday: Closed",
       ],
       action: null,
