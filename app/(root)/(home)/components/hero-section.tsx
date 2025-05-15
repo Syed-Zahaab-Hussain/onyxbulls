@@ -21,9 +21,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-medium mb-2 text-neon-400 dark:text-neon-500"
+          className="text-2xl md:text-3xl font-medium mb-2 text-white"
+          // className="text-2xl md:text-3xl font-medium mb-2 text-neon-400 dark:text-neon-500"
         >
-          Let every trade
+          Let your strategy
         </motion.h2>
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
@@ -31,10 +32,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white"
         >
-          bring you closer to
-          <br />
+          {/* bring you closer to
+          <br /> */}
           <span className="text-neon-400 dark:text-neon-500">
-            financial freedom
+            meets execution
           </span>
         </motion.h1>
       </div>

@@ -34,7 +34,7 @@ const BriefInfos = [
     reverseLayout: false,
   },
   {
-    title: "The Power of Forex Trading (Cryptocurrency Revolution)",
+    title: "The Power of Forex Trading",
     description:
       "Step into the world’s most liquid market with expert support from ONYXBULLS. Learn how currencies move, when to trade, and how to build strategies that perform.",
     items: [
