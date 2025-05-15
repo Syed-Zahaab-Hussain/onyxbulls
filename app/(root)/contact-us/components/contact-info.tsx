@@ -30,13 +30,10 @@ export default function ContactInfo() {
     {
       icon: <Mail className="h-6 w-6 text-neon-500" />,
       title: "Email Addresses",
-      details: [
-        "mk1626836@gmail.com (Support)",
-        "onyxbulls44@gmail.com (Info)",
-      ],
+      details: ["support@onyxbulls.com"],
       action: {
         text: "Email Us",
-        url: "mailto:onyxbulls44@gmail.com",
+        url: "mailto:support@onyxbulls.com",
         icon: null,
       },
     },

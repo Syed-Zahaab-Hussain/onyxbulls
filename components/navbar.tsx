@@ -32,7 +32,7 @@ export default function Navbar() {
             />
           </div>
           <div>
-            <span className="font-bold text-xl text-white uppercase group-hover:text-neon-400 transition-colors duration-300">
+            <span className="font-bold text-xl text-white uppercase">
               Onyxbulls
             </span>
           </div>

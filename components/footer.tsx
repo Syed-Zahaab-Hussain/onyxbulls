@@ -22,7 +22,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <span className="font-bold text-2xl uppercase text-white group-hover:text-neon-400 transition-colors duration-300">
+                <span className="font-bold text-2xl uppercase text-white">
                   Onyxbulls
                 </span>
               </div>
@@ -88,10 +88,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-neon-500 flex-shrink-0" />
-                <span className="text-gray-300">
-                  mk1626836@gmail.com (Support) <br /> onyxbulls44@gmail.com
-                  (Info)
-                </span>
+                <span className="text-gray-300">support@onyxbulls.com</span>
               </li>
             </ul>
           </div>
