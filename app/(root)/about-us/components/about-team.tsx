@@ -84,9 +84,10 @@ export default function AboutTeam({
                       ? urlFor(member.image).url()
                       : "https://placehold.co/600x400?text=No+Image"
                   }
-                  alt={member.name}
+                  alt={`Portrait of ${member.name}, ${member.role} at Onyxbulls Pakistan`}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
               <div className="p-6">

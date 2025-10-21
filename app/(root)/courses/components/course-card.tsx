@@ -30,9 +30,10 @@ export function CourseCard({ course }: CourseCardProps) {
                   ? urlFor(course.image).url()
                   : "https://placehold.co/600x400?text=No+Image"
               }
-              alt={course.title}
+              alt={`Course thumbnail: ${course.title} - Professional forex trading course at Onyxbulls Pakistan`}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
         </Link>
@@ -62,9 +63,10 @@ export function CourseCard({ course }: CourseCardProps) {
                   ? urlFor(course.instructor.image).url()
                   : "https://placehold.co/600x400?text=No+Image"
               }
-              alt={course.instructor?.name || "Instructor"}
+              alt={`Portrait of ${course.instructor?.name || "Course instructor"}, forex trading expert at Onyxbulls Pakistan`}
               fill
               className="object-cover"
+              sizes="40px"
             />
           </div>
           <div>

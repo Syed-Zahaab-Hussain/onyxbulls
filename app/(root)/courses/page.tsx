@@ -9,7 +9,17 @@ import { Metadata } from "next";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Course",
+  title: "Forex Trading Courses - Professional Education in Pakistan",
+  description: "Explore comprehensive forex trading courses designed for Pakistani traders. From beginner to advanced levels, learn proven strategies and gain practical trading experience with Onyxbulls.",
+  keywords: ["forex courses pakistan", "trading education", "forex training", "professional trading courses", "trading strategies"],
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/courses`,
+  },
+  openGraph: {
+    title: "Forex Trading Courses - Professional Education in Pakistan",
+    description: "Explore comprehensive forex trading courses designed for Pakistani traders. From beginner to advanced levels, learn proven strategies and gain practical trading experience with Onyxbulls.",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/courses`,
+  },
 };
 
 interface SearchParams {

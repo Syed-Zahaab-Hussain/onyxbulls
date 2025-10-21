@@ -25,10 +25,11 @@ export default function Navbar() {
           <div className="relative h-12 w-12 mr-3">
             <Image
               src="/images/logo.svg"
-              alt="Onyxbulls Logo"
+              alt="Onyxbulls Logo - Forex Trading Education in Pakistan"
               width={72}
               height={72}
               className="object-contain"
+              priority
             />
           </div>
           <div>

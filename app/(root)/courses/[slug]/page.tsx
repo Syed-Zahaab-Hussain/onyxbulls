@@ -23,11 +23,28 @@ export async function generateMetadata({
   params: ParamsProps;
 }): Promise<Metadata> {
   const course = await getCourse(params.slug || "");
+  const courseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/courses/${course.slug}`;
+  
   return {
-    title: course.title,
+    title: `${course.title} - Professional Forex Trading Course`,
     description: course.longDescription,
+    keywords: [course.title, "forex course", "trading education", "pakistan", "trading strategies"],
+    alternates: {
+      canonical: courseUrl,
+    },
     openGraph: {
-      images: [{ url: course.image }],
+      title: `${course.title} - Professional Forex Trading Course`,
+      description: course.longDescription,
+      url: courseUrl,
+      type: "article",
+      images: [
+        {
+          url: course.image,
+          width: 1200,
+          height: 630,
+          alt: course.title,
+        },
+      ],
     },
   };
 }

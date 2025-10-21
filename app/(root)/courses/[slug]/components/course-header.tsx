@@ -45,10 +45,11 @@ export default function CourseHeader({ course }: { course: Course }) {
         <div className="absolute inset-0 -z-10">
           <Image
             src={urlFor(course.backgroundImage).url()}
-            alt={course.title}
+            alt={`Background image for ${course.title} course - Professional forex trading education at Onyxbulls Pakistan`}
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
         </div>
@@ -100,9 +101,10 @@ export default function CourseHeader({ course }: { course: Course }) {
                       course.instructor?.image ||
                       "https://placehold.co/600x400?text=No+Image"
                     }
-                    alt={course.instructor?.name || "Instructor"}
+                    alt={`Portrait of ${course.instructor?.name || "Course instructor"}, forex trading expert for ${course.title} course`}
                     fill
                     className="object-cover"
+                    sizes="40px"
                   />
                 </div>
                 <div>
@@ -122,9 +124,10 @@ export default function CourseHeader({ course }: { course: Course }) {
             <div className="relative h-48 w-full mb-6 rounded-md overflow-hidden">
               <Image
                 src={course.image || "/default-course.jpg"}
-                alt={course.title}
+                alt={`Course cover image: ${course.title} - Professional forex trading course at Onyxbulls Pakistan`}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
 

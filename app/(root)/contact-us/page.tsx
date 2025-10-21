@@ -10,7 +10,17 @@ import { Metadata } from "next";
 export const revalidate = 60 * 60 * 24;
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us - Get in Touch with Onyxbulls Trading Experts",
+  description: "Contact Onyxbulls for forex trading education in Pakistan. Visit our office in Quetta or call us for expert trading guidance and course information.",
+  keywords: ["contact onyxbulls", "forex training pakistan", "trading support", "quetta forex education"],
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/contact-us`,
+  },
+  openGraph: {
+    title: "Contact Us - Get in Touch with Onyxbulls Trading Experts",
+    description: "Contact Onyxbulls for forex trading education in Pakistan. Visit our office in Quetta or call us for expert trading guidance and course information.",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact-us`,
+  },
 };
 
 

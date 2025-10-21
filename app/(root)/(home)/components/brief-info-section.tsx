@@ -30,7 +30,7 @@ const BriefInfos = [
       },
     ],
     imageSrc: "/images/home/info-section-1.jpg",
-    imageAlt: "Trading Education",
+    imageAlt: "Professional forex trading education classroom with students learning trading strategies at Onyxbulls Pakistan",
     reverseLayout: false,
   },
   {
@@ -58,7 +58,7 @@ const BriefInfos = [
       },
     ],
     imageSrc: "/images/home/info-section-2.jpg",
-    imageAlt: "Cryptocurrency Trading",
+    imageAlt: "Advanced forex and cryptocurrency trading analysis with multiple screens showing market charts and technical indicators",
     reverseLayout: true,
   },
 ];
@@ -134,6 +134,7 @@ export default function BriefInfoSection() {
                     width={600}
                     height={400}
                     className="w-full h-auto object-cover max-w-full"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </motion.div>

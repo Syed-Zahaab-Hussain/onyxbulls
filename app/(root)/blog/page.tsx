@@ -8,7 +8,17 @@ import { Metadata } from "next";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Forex Trading Blog - Insights & Strategies for Pakistani Traders",
+  description: "Discover expert forex trading insights, market analysis, and proven strategies tailored for traders in Pakistan. Stay updated with the latest trends and tips from Onyxbulls experts.",
+  keywords: ["forex blog pakistan", "trading insights", "market analysis", "trading strategies", "forex tips"],
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
+  },
+  openGraph: {
+    title: "Forex Trading Blog - Insights & Strategies for Pakistani Traders",
+    description: "Discover expert forex trading insights, market analysis, and proven strategies tailored for traders in Pakistan. Stay updated with the latest trends and tips from Onyxbulls experts.",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
+  },
 };
 
 interface SearchParams {

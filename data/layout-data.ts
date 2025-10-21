@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export const navLinks = [
   {
@@ -21,50 +21,30 @@ export const navLinks = [
     title: "Contact Us",
     href: "/contact-us",
   },
+  {
+    title: "Terms of Service",
+    href: "/terms-of-service",
+  },
+  {
+    title: "Privacy Policy",
+    href: "/privacy-policy",
+  },
 ];
 
 export const socialIcons = [
   {
-    href: "#",
+    name: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61570187984613",
     icon: Facebook,
   },
   {
-    href: "#",
-    icon: Twitter,
-  },
-  {
-    href: "#",
+    name: "Instagram",
+    href: "https://www.instagram.com/onyxbulls/",
     icon: Instagram,
   },
   {
-    href: "#",
-    icon: Linkedin,
-  },
-  {
-    href: "#",
+    name: "YouTube",
+    href: "https://www.youtube.com/@onyxbullstrader",
     icon: Youtube,
-  },
-];
-
-export const tradingResourceLinks = [
-  {
-    title: "Forex Basics",
-    href: "#",
-  },
-  {
-    title: "Cryptocurrency Guide",
-    href: "#",
-  },
-  {
-    title: "Technical Analysis",
-    href: "#",
-  },
-  {
-    title: "Fundamental Analysis",
-    href: "#",
-  },
-  {
-    title: "Trading Psychology",
-    href: "#",
   },
 ];

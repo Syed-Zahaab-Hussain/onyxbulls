@@ -7,10 +7,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts: Post[] = await client.fetch(POSTS_QUERY, { search: "" });
 
   // console.log(posts);
-  const courses: Course[] = await client.fetch(COURSES_QUERY, { search: "" });
+  const courses: Course[] = await client.fetch(COURSES_QUERY, {
+    search: "",
+    plan: "",
+  });
 
   const courseEntries: MetadataRoute.Sitemap = courses.map(({ slug }) => ({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/course/${slug}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/courses/${slug}`,
   }));
 
   const postEntries: MetadataRoute.Sitemap = posts.map(({ slug }) => ({
@@ -31,6 +34,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact-us`,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/terms-of-service`,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/privacy-policy`,
     },
     ...postEntries,
     ...courseEntries,

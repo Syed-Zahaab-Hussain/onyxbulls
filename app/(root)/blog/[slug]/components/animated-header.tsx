@@ -27,10 +27,11 @@ export default function AnimatedHeader({
             ? urlFor(mainImage).url()
             : "https://placehold.co/600x400?text=No+Image"
         }
-        alt={title || "Blog post image"}
+        alt={`Featured image for blog post: ${title || "Forex trading insights from Onyxbulls Pakistan"}`}
         fill
         className="object-cover opacity-60"
         priority
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
       <div className="absolute inset-0 flex items-end">

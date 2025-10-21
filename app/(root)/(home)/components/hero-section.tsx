@@ -9,10 +9,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/home/hero-bg.jpg"
-          alt="Trading background with jets"
+          alt="Professional forex trading environment with charts and financial data - Onyxbulls Pakistan"
           fill
           className="object-cover opacity-40 dark:opacity-30"
           priority
+          sizes="100vw"
         />
       </div>
 

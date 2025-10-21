@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="relative h-16 w-16 mr-3">
                 <Image
                   src="/images/logo.svg"
-                  alt="Dominion Markets Logo"
+                  alt="Onyxbulls Logo - Forex Trading Education in Pakistan"
                   width={72}
                   height={72}
                   className="object-contain"
@@ -36,15 +36,16 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialIcons.map((item, index) => (
+              {socialIcons.map(({ href, icon: Icon, name }, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-black hover:bg-neon-900 border border-neon-500/30 h-10 w-10 rounded-full flex items-center justify-center transition-colors"
-                  aria-label="Facebook"
+                  aria-label={`Follow Onyxbulls on ${name} (opens in new tab)`}
                 >
-                  <item.icon size={18} className="text-neon-500" />
+                  <Icon size={18} className="text-neon-500" />
                 </a>
               ))}
             </div>
@@ -101,13 +102,13 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <Link
-              href="#"
+              href="/terms-of-service"
               className="text-gray-400 hover:text-neon-400 transition-colors"
             >
               Terms of Service
             </Link>
             <Link
-              href="#"
+              href="/privacy-policy"
               className="text-gray-400 hover:text-neon-400 transition-colors"
             >
               Privacy Policy

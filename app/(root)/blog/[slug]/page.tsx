@@ -28,11 +28,30 @@ export async function generateMetadata({
   params: ParamsProps;
 }): Promise<Metadata> {
   const post = await getPost(params.slug || "");
+  const postUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.slug.current}`;
+  
   return {
-    title: post.title,
+    title: `${post.title} - Forex Trading Blog`,
     description: post.excerpt,
+    keywords: post.category ? [post.category.title, "forex trading", "trading strategies", "pakistan"] : ["forex trading", "trading strategies", "pakistan"],
+    alternates: {
+      canonical: postUrl,
+    },
     openGraph: {
-      images: [{ url: urlFor(post.mainImage).url() }],
+      title: `${post.title} - Forex Trading Blog`,
+      description: post.excerpt,
+      url: postUrl,
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: [post.author.name],
+      images: [
+        {
+          url: urlFor(post.mainImage).url(),
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }

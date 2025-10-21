@@ -16,7 +16,17 @@ import { Metadata } from "next";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home - Forex Trading Education in Pakistan",
+  description: "Start your forex trading journey with Onyxbulls in Pakistan. Professional courses, expert guidance, and proven strategies to help you achieve financial freedom through trading.",
+  keywords: ["forex trading pakistan", "trading courses", "financial freedom", "forex education"],
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+  },
+  openGraph: {
+    title: "Home - Forex Trading Education in Pakistan",
+    description: "Start your forex trading journey with Onyxbulls in Pakistan. Professional courses, expert guidance, and proven strategies to help you achieve financial freedom through trading.",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+  },
 };
 
 export default async function Home() {
@@ -26,7 +36,7 @@ export default async function Home() {
   const pricingPlans = await client.fetch(PRICING_PLANS_QUERY);
 
   return (
-    <main className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <main id="main-content" className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* Hero Section */}
       <Hero />
 

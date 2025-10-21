@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function AboutHero() {
+export default function TermsHero() {
   return (
     <section className="relative w-full bg-gradient-to-b from-black to-black/80 dark:from-black dark:to-black/90 overflow-hidden border-b border-neon-500/20 dark:border-neon-500/30 transition-colors duration-300 z-10">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/home/hero-bg.jpg"
-          alt="Professional forex trading background showing financial charts and market data - Onyxbulls Pakistan team"
+          alt="Terms of Service background - Onyxbulls forex trading education"
           fill
           className="object-cover opacity-40 dark:opacity-30"
           priority
@@ -30,8 +30,8 @@ export default function AboutHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            Empowering Traders{" "}
-            <span className="text-neon-400 dark:text-neon-500">Since 2024</span>
+            Terms of{" "}
+            <span className="text-neon-400 dark:text-neon-500">Service</span>
           </motion.h1>
 
           <motion.p
@@ -40,10 +40,7 @@ export default function AboutHero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-8"
           >
-            At ONYXBULLS, we&apos;ve guided over 30 aspiring traders on their
-            journey to financial mastery through expert-led education,
-            one-on-one mentorship, and real-world trading strategies designed
-            for lasting success.
+            Please read these terms carefully before using our forex trading education services.
           </motion.p>
 
           <motion.div

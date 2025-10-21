@@ -20,9 +20,10 @@ export default function BlogPostCard({ post }: { post: Post }) {
                 ? urlFor(post.mainImage).url()
                 : "https://placehold.co/600x400?text=No+Image"
             }
-            alt={post?.title ?? "Blog post image"}
+            alt={post?.title ? `Featured image for blog post: ${post.title}` : "Blog post featured image"}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
           <div className="absolute top-4 left-4">
             {post.publishedAt && (

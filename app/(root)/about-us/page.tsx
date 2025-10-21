@@ -13,7 +13,17 @@ import { Metadata } from "next";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us - Our Mission to Empower Traders in Pakistan",
+  description: "Learn about Onyxbulls' mission to provide quality forex trading education in Pakistan. Meet our expert team and discover our approach to helping traders achieve financial freedom.",
+  keywords: ["about onyxbulls", "forex education pakistan", "trading team", "trading mission"],
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/about-us`,
+  },
+  openGraph: {
+    title: "About Us - Our Mission to Empower Traders in Pakistan",
+    description: "Learn about Onyxbulls' mission to provide quality forex trading education in Pakistan. Meet our expert team and discover our approach to helping traders achieve financial freedom.",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/about-us`,
+  },
 };
 
 export default async function AboutPage() {
@@ -21,7 +31,7 @@ export default async function AboutPage() {
   const reviews = await client.fetch(REVIEWS_QUERY);
 
   return (
-    <main className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <main id="main-content" className="flex min-h-screen flex-col bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       <AboutHero />
 
       <AboutMission />
