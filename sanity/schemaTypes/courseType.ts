@@ -61,18 +61,10 @@ export const courseType = defineType({
       validation: (Rule) => Rule.required().positive().integer(),
     }),
     defineField({
-      name: "level",
-      title: "Difficulty Level",
-      type: "string",
-      options: {
-        list: [
-          { title: "Beginner", value: "Beginner" },
-          { title: "Intermediate", value: "Intermediate" },
-          { title: "Advanced", value: "Advanced" },
-          { title: "All Levels", value: "All Levels" },
-        ],
-        layout: "dropdown",
-      },
+      name: "pricingPlan",
+      title: "Pricing Plan",
+      type: "reference",
+      to: { type: "pricingPlan" },
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -189,14 +181,14 @@ export const courseType = defineType({
   preview: {
     select: {
       title: "title",
-      level: "level",
+      pricingPlan: "pricingPlan.name",
       media: "image",
     },
     prepare(selection) {
-      const { title, level, media } = selection;
+      const { title, pricingPlan, media } = selection;
       return {
         title: title,
-        subtitle: level,
+        subtitle: pricingPlan,
         media: media,
       };
     },

@@ -72,7 +72,7 @@ export default function CourseHeader({ course }: { course: Course }) {
               variants={itemVariants}
               className="flex flex-wrap gap-2 mb-4"
             >
-              <Badge className="bg-neon-500 text-black">{course.level}</Badge>
+              <Badge className="bg-neon-500 text-black">{course.pricingPlan}</Badge>
             </motion.div>
 
             <motion.h1

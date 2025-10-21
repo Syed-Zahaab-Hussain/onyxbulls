@@ -97,13 +97,15 @@ export const POST_QUERY = `*[_type == "post" &&
   body
 }[0]`;
 
-export const COURSES_QUERY = `*[_type == "course" && 
-  lower(title) match lower($search + "*") ] | order(_createdAt desc) {
+export const COURSES_QUERY = `*[_type == "course" &&
+  lower(title) match lower($search + "*") &&
+  (!$plan || $plan == "All" || $plan == "" || pricingPlan->name == $plan)
+] | order(_createdAt desc) {
   _id,
   title,
   "slug": slug.current,
   _createdAt,
-  level,
+  "pricingPlan": pricingPlan->name,
   description,
   duration,
   lessons,
@@ -122,7 +124,7 @@ export const COURSE_QUERY = `*[_type == "course" && slug.current == $slug]  {
   "slug": slug.current,
   longDescription,
   _createdAt,
-  level,
+  "pricingPlan": pricingPlan->name,
   description,
   duration,
   lessons,
@@ -136,14 +138,14 @@ export const COURSE_QUERY = `*[_type == "course" && slug.current == $slug]  {
  "image": image.asset->url,
  "backgroundImage": backgroundImage.asset->url,
  syllabus[]{
-    title,
-    lessons[]{
-      title,
-      duration
-    }
-  },
-  requirements,
-  includes
+   title,
+   lessons[]{
+     title,
+     duration
+   }
+ },
+ requirements,
+ includes
 }[0]`;
 
 export const ACHIEVEMENTS_QUERY = `*[_type == "achievement"] | order(_createdAt desc) {

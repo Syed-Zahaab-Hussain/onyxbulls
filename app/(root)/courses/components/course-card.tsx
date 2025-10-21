@@ -41,7 +41,7 @@ export function CourseCard({ course }: CourseCardProps) {
       <CardHeader>
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="secondary" className="text-xs ml-auto">
-            {course.level}
+            {course.pricingPlan}
           </Badge>
         </div>
         <CardTitle className="group-hover:text-neon-500 transition-colors duration-300">

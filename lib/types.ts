@@ -6,7 +6,7 @@ export interface Course {
   };
   description: string;
   longDescription: string;
-  level: string;
+  pricingPlan: string;
   price: number;
   salePrice?: number;
   duration: string;

@@ -1,7 +1,7 @@
 import CourseHero from "@/app/(root)/courses/components/course-hero";
 import { CourseFilter } from "@/app/(root)/courses/components/course-filter";
 import AnimatedCourseCards from "./components/animated-course-cards";
-import { COURSES_QUERY } from "@/sanity/lib/queries";
+import { COURSES_QUERY, PRICING_PLANS_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 
 import { Metadata } from "next";
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 interface SearchParams {
   search?: string;
+  plan?: string;
 }
 
 export default async function CoursesPage({
@@ -21,9 +22,10 @@ export default async function CoursesPage({
 }: {
   searchParams: SearchParams;
 }) {
-  const { search = "" } = searchParams;
+  const { search = "", plan = "" } = searchParams;
 
-  const courses = await client.fetch(COURSES_QUERY, { search });
+  const courses = await client.fetch(COURSES_QUERY, { search, plan });
+  const pricingPlans = await client.fetch(PRICING_PLANS_QUERY);
 
   return (
     <>
@@ -31,9 +33,7 @@ export default async function CoursesPage({
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Browse Our Courses</h2>
-
-          <CourseFilter />
+          <CourseFilter pricingPlans={pricingPlans} />
 
           <div className="mt-12">
             {<AnimatedCourseCards courses={courses} />}

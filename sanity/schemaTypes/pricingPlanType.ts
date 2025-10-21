@@ -13,8 +13,8 @@ export const pricingPlanType = defineType({
     }),
     defineField({
       name: "price",
-      title: "Monthly Price",
-      description: "Price in cents (e.g., $100 = 10000)",
+      title: "Course Price",
+      description: "Price in cents (e.g., 1000 = 10000)",
       type: "number",
       validation: (Rule) => Rule.required().positive(),
     }),
@@ -64,7 +64,7 @@ export const pricingPlanType = defineType({
       const { title, price, features } = selection;
       return {
         title: title,
-        subtitle: `$${(price / 100).toFixed(2)}/mo • ${
+        subtitle: `Rs ${(price / 100).toFixed(2)}/mo • ${
           features?.length || 0
         } features`,
       };
