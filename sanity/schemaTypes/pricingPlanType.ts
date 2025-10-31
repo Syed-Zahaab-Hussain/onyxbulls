@@ -16,7 +16,7 @@ export const pricingPlanType = defineType({
       title: "Per Traning Price (USD)",
       description: "Price in US-Dollar",
       type: "number",
-      validation: (Rule) => Rule.required().min(0).precision(2),
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: "description",
