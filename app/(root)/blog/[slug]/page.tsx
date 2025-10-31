@@ -12,6 +12,10 @@ import { cache } from "react";
 import { ShareButtons } from "./components/ShareButtons";
 import { notFound } from "next/navigation";
 
+
+export const revalidate = 0;
+
+
 interface ParamsProps {
   slug?: string;
 }
