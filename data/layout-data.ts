@@ -21,6 +21,29 @@ export const navLinks = [
     title: "Contact Us",
     href: "/contact-us",
   },
+];
+
+export const fotterLinks = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About Us",
+    href: "/about-us",
+  },
+  {
+    title: "Courses",
+    href: "/courses",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact-us",
+  },
   {
     title: "Terms of Service",
     href: "/terms-of-service",

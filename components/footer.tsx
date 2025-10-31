@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Mail, Phone, MapPin } from "lucide-react";
-import { socialIcons, navLinks } from "@/data/layout-data";
+import { socialIcons, fotterLinks } from "@/data/layout-data";
 
 export default function Footer() {
   return (
@@ -57,7 +57,7 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {navLinks.map((item) => (
+              {fotterLinks.map((item) => (
                 <li key={item.title}>
                   <Link
                     href={item.href}
