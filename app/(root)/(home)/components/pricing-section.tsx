@@ -61,7 +61,7 @@ export default function PricingSection({ plans }: PricingSectionProps) {
                       {CurrencyFormat(currentPlan.price)}
                     </span>
                     <span className="text-gray-500 dark:text-gray-400 text-lg md:text-xl whitespace-nowrap">
-                      /per course
+                      /per training
                     </span>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-base md:text-lg">
@@ -124,7 +124,7 @@ export default function PricingSection({ plans }: PricingSectionProps) {
                             {CurrencyFormat(plan.price)}
                           </p>
                           <span className="text-gray-500 dark:text-gray-400 text-sm md:text-base whitespace-nowrap">
-                            /per course
+                            /per training
                           </span>
                         </div>
                       </div>

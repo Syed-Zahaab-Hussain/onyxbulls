@@ -25,9 +25,17 @@ export function DateFormat(date: string): string {
   }
 }
 
+// export function CurrencyFormat(amount: number) {
+//   return new Intl.NumberFormat("en-PK", {
+//     style: "currency",
+//     currency: "PKR",
+//   }).format(amount);
+// }
+
+
 export function CurrencyFormat(amount: number) {
-  return new Intl.NumberFormat("en-PK", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "PKR",
+    currency: "USD",
   }).format(amount);
 }

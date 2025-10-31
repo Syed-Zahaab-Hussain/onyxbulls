@@ -7,7 +7,7 @@ import { FAQS_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { Metadata } from "next";
 
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Contact Us - Get in Touch with Onyxbulls Trading Experts",
